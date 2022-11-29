@@ -51,13 +51,12 @@ class HBNBCommand(cmd.Cmd):
         "Review"
     }
 
-
     def emptyline(self):
         """
         Does nothing upon receiving an empty line.
         """
         pass
-    
+
     def default(self, arg):
         """
         Default behaviour for cmd module when input is invalid.
@@ -224,6 +223,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     obj.__dict__[k] = v
         storage.save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
